@@ -66,11 +66,13 @@ SELECT
 	ELSE '07Sat' END as Day_Returned,
 	substr(started_at, 12, 2) as Hour_Borrowed,			-- I will be using this line to get what hour of the day the bike is borrowed. This will return 0-23 values corresponding to every hour of the day. I labeled this column as Hour_Borrowed
 	round((julianday(ended_at)-julianday(started_at))*1440,2) as Trip_Duration		-- In this lineI will be subtracting date/time of started_at 
-																					-- to ended_at column, the value returned will be in days so 
-																					-- i need to multiply it to 1440 to convert it to minutes. I 
-																					-- also limit it to two decimal places
-																					-- I named the column as Trip_Duration
+												-- to ended_at column, the value returned will be in days so 
+												-- i need to multiply it to 1440 to convert it to minutes. I 
+												-- also limit it to two decimal places
+												-- I named the column as Trip_Duration
 																					
+
+
 -- After creating the temp table, we will run command line:
 
 SELECT *
