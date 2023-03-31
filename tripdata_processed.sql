@@ -8,7 +8,7 @@ SELECT ()
 FROM tripdata
 WHERE () is NOT NULL
 
--- provide column name inside parenthesis to return column with values
+-- provide column name inside parenthesis (then remove parenthesis) to return column with values
 -- ride_id, rideable_type, member_casual, started_at, ended_at all have complete values
 
 -- columns start_lat, start_lng, end_lat, end_lng, start_station_id, end_station_id, end_station_name will not be included 
